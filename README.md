@@ -1,14 +1,37 @@
 # Lưu ý quan trọng
 
-- Tối qua tôi đã submit kết quả bằng phương pháp ensemble, nhưng quên lưu weight của model số 2. Vì vậy hôm nay khi chạy lại pipeline, tôi phải train lại riêng model số 2. Kết quả ensemble với model này có thể có sai lệch nhỏ so với bản submit trước.  
-- Trong file train ban đầu, tôi có lưu training log thể hiện quá trình train và inference. Ban giám khảo có thể tham khảo ở file **effvs2_27e_b0_13e_mass_aug.ipynb** (bao gồm cả log training và inference).  
-- Ngoài ra, repo còn có các file sau:  
-  1. **train_only_13_epochs_b2.ipynb**: train 13 epochs cho model ensemble số 2, dùng để train lại do không lưu weight.  
-  2. **train_full_pipeline.ipynb**: train 25 epochs cho model ensemble số 1 và 13 epochs cho model ensemble số 2. Có thể chạy lại toàn bộ pipeline bằng Run-All, bao gồm cả inference, kết quả lưu ở file **my_submission_no_tta.csv**.
-  3. **inference_all.ipynb**: luồng inference, có thể dùng model path.
-  4. File weight model được lưu trên google drive ở link: https://drive.google.com/drive/folders/1OPI5FK_DPgfwUYMhHTR0vEtAuuASpQBh?usp=drive_link
+- Tối **2026-04-19**, tôi đã submit kết quả bằng phương pháp **ensemble**, nhưng **quên lưu weight của model #2**. Vì vậy **hôm nay 2026-04-20** khi chạy lại pipeline, tôi phải **train lại riêng model #2**. Kết quả ensemble với model train lại có thể **sai lệch nhỏ** so với bản submit trước.
+
+- Trong notebook train ban đầu, tôi có lưu **training log** thể hiện đầy đủ quá trình **train** và **inference**. Ban giám khảo có thể tham khảo tại:  
+  - [`effvs2-27e-b0-13e-mass-aug.ipynb`](effvs2-27e-b0-13e-mass-aug.ipynb)
+
+## Các file chính trong repo
+
+1. **Train lại model ensemble #2 (do không lưu weight)**
+   - [`train-only-13-epochs-b2.ipynb`](train-only-13-epochs-b2.ipynb): train **13 epochs** cho model ensemble #2.
+
+2. **Chạy lại toàn bộ pipeline (train + inference)**
+   - [`train-full-pipeline.ipynb`](train-full-pipeline.ipynb):  
+     - Train **25 epochs** cho model ensemble #1  
+     - Train **13 epochs** cho model ensemble #2  
+     - Có thể Run-All để chạy lại toàn bộ pipeline, bao gồm cả inference.  
+     - Kết quả inference (submission) được lưu tại:
+       - [`my_submission_no_tta (2).csv`](my_submission_no_tta%20(2).csv)
+
+3. **Inference (có thể dùng model path)**
+   - [`inference-all.ipynb`](inference-all.ipynb): luồng inference, có thể trỏ tới đường dẫn weight model.
+
+## Link weight model (Google Drive)
+
+- Weight model được lưu tại Google Drive:  
+  - https://drive.google.com/drive/folders/1OPI5FK_DPgfwUYMhHTR0vEtAuuASpQBh?usp=drive_link
 
 # Cách train và inference
 
-1. Nếu muốn chạy lại toàn bộ pipeline để kiểm chứng khả năng tái lập, ban tổ chức có thể Run-All file **train_full_pipeline.ipynb**.  
-2. Nếu muốn sử dụng file weight có sẵn trong repo để inference, ban tổ chức có thể Run-All file **inference_all.ipynb**.  
+1. **Kiểm chứng khả năng tái lập (reproducibility)**  
+   Ban tổ chức có thể Run-All notebook:
+   - [`train-full-pipeline.ipynb`](train-full-pipeline.ipynb)
+
+2. **Inference bằng weight có sẵn**  
+   Ban tổ chức có thể Run-All notebook:
+   - [`inference-all.ipynb`](inference-all.ipynb)
