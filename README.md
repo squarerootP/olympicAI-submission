@@ -4,8 +4,9 @@
 - Trong file train ban đầu, tôi có lưu training log thể hiện quá trình train và inference. Ban giám khảo có thể tham khảo ở file **effvs2_27e_b0_13e_mass_aug.ipynb** (bao gồm cả log training và inference).  
 - Ngoài ra, repo còn có các file sau:  
   1. **train_only_13_epochs_b2.ipynb**: train 13 epochs cho model ensemble số 2, dùng để train lại do không lưu weight.  
-  2. **train_full_pipeline.ipynb**: train 25 epochs cho model ensemble số 1 và 13 epochs cho model ensemble số 2. Có thể chạy lại toàn bộ pipeline bằng Run-All, bao gồm cả inference, kết quả lưu ở file **my_submission_no_tta.csv**.  
-  3. File weight của model ensemble số 1: đây là weight chính xác đã được lưu và dùng cho submission.  
+  2. **train_full_pipeline.ipynb**: train 25 epochs cho model ensemble số 1 và 13 epochs cho model ensemble số 2. Có thể chạy lại toàn bộ pipeline bằng Run-All, bao gồm cả inference, kết quả lưu ở file **my_submission_no_tta.csv**.
+  3. **inference_all.ipynb**: luồng inference, có thể dùng model path.
+  4. File weight model được lưu trên google drive ở link: https://drive.google.com/drive/folders/1OPI5FK_DPgfwUYMhHTR0vEtAuuASpQBh?usp=drive_link
 
 # Cách train và inference
 
